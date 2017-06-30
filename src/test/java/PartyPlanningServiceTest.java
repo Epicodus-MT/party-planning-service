@@ -1,12 +1,12 @@
 import org.junit.*;
 import static org.junit.Assert.*;
 
-public class PartyPlanningServiceTest {
+public class PartyPlanning {
 
   @Test
   public void runPartyPlanningService_instatiates() {
-    PartyPlanningService testPartyPlanningService = new PartyPlanningService();
-    assertEquals(true, testPartyPlanningService instanceOf PartyPlanningService);
+    PartyPlanning testPartyPlanning = new PartyPlanning(100, "lunch", "none", "none");
+    assertEquals(true, testPartyPlanning instanceOf PartyPlanning);
   }
 
 }

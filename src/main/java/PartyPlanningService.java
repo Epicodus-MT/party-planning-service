@@ -10,11 +10,11 @@ public class PlanningServiceTest {
   private int mEntertainmentCost;
   private int mTotalCost;
 
-  public void Party(int guestNumbers, String meal, String bar, String entertainment) {
-    mGuestNumbers = guestNumbers;
-    mMealOptions = meal.toLowerCase();
-    mBarOptions = bar.toLowerCase();
-    mEntertainmentOptions = entertainment.toLowerCase();
+  public Party (int guests, String meal, String bar, String entertainment) {
+    mGuestNumbers = guests;
+    mMealOptions = meal.toUpperCase();
+    mBarOptions = bar.toUpperCase();
+    mEntertainmentOptions = entertainment.toUpperCase();
   }
 
 

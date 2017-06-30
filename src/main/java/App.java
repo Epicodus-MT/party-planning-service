@@ -8,10 +8,10 @@ public class App {
     boolean runPartyProgram = true;
     // boolean drawLoop = true;
 
-    int guests = 0;
-    String meal = "";
-    String bar = "";
-    String entertainment = "";
+    // int guests = 0;
+    // String meal = "";
+    // String bar = "";
+    // String entertainment = "";
 
     //WELCOME
     System.out.println("Welcome to Timberlake Event Planning");
@@ -19,8 +19,8 @@ public class App {
     System.out.println("----------------------------------");
 
     //NEW EVENT
-    PartyPlanningService party = new Party();
-    party.initializeParty();
+    // PartyPlanningService party = new PartyPlanningService();
+    // party.initializeParty();
 
     while (runPartyProgram) {
       //USER PROMPT

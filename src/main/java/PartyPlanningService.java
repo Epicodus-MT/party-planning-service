@@ -7,7 +7,7 @@ public class PartyPlanningService {
   private String mEntertainmentOptions;
   private int mTotalCost;
 
-  public Party (int guests, String meal, String bar, String entertainment) {
+  public PartyPlanningService (int guests, String meal, String bar, String entertainment) {
     mGuestNumbers = guests;
     mMealOptions = meal.toUpperCase();
     mBarOptions = bar.toUpperCase();
@@ -24,6 +24,7 @@ public class PartyPlanningService {
     mTotalCost += 7;
     } else if (mMealOptions.equals("HEAVY APPS")) {
       mTotalCost += 10;
+    }
 
     if (mBarOptions.equals("FULL BAR")) {
       mTotalCost += 20;
@@ -41,6 +42,6 @@ public class PartyPlanningService {
     } else if (mEntertainmentOptions.equals("MAGICIAN")) {
       mTotalCost += 200;
     }
-  return mTotalCost;
+    return mTotalCost;
   }
 }

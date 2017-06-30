@@ -30,8 +30,26 @@ public class App {
 
       if (userInput.equals("PARTY")) {
         //~~~~~~~~UPDATE DETAILS~~~~~~~
-        System.out.println("You have chosen to party! Nice!!");
+        System.out.println("What is your party size?: ");
+        int userGuestNumbers = Integer.parseInt(console.readLine());
 
+        System.out.println("What type of food would you like?: lunch, dinner, light apps, heavy apps, or none");
+        String userMealType = console.readLine();
+
+        System.out.println("What type of drink options would you like?: full bar, wine & beer, or none");
+        String userBarType = console.readLine();
+
+        System.out.println("What type of entertainment would you like?: DJ, steel drum band,line dancing, magician, or none");
+        String userEntertainmentType = console.readLine();
+
+        PartyPlanningService userDetails = new PartyPlanningService(userGuestNumbers, userMealType, userBarType, userEntertainmentType);
+
+        System.out.println("PARTY DETAILS:")
+        System.out.println("----------------------------------");
+        System.out.println("Guest Numbers: " + userDetails.getGuestNumbers());
+        System.out.println("Meal Plan: " + userDetails.getMealType());
+        System.out.println("Bar Plan: " + userDetails.getBarType());
+        System.out.println("Entertainment: " + userDetails.getEntertainmentType());
 
 
 

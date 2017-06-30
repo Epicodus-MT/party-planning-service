@@ -8,7 +8,7 @@ public class App {
     boolean runPartyProgram = true;
     // boolean drawLoop = true;
 
-    int guestNumbers = 0;
+    int guests = 0;
     String meal = "";
     String bar = "";
     String entertainment = "";
@@ -19,8 +19,8 @@ public class App {
     System.out.println("----------------------------------");
 
     //NEW EVENT
-    Party party = new Party();
-    party.initializeParty();
+    // Party party = new Party();
+    // party.initializeParty();
 
     while (runPartyProgram) {
       //USER PROMPT
@@ -31,26 +31,37 @@ public class App {
       if (userInput.equals("PARTY")) {
         //~~~~~~~~UPDATE DETAILS~~~~~~~
         System.out.println("What is your party size?: ");
-        int userGuestNumbers = Integer.parseInt(console.readLine());
+        int guests = Integer.parseInt(console.readLine());
 
         System.out.println("What type of food would you like?: lunch, dinner, light apps, heavy apps, or none");
-        String userMealType = console.readLine();
+        String meal = console.readLine();
 
-        System.out.println("What type of drink options would you like?: full bar, wine & beer, or none");
-        String userBarType = console.readLine();
+        boolean accurateMealInput = true;
+        while(accurateMealInput) {
+          meal = console.readLine().toUpperCase();
+          if(meal.equals("lunch") || meal.equals("dinner") || meal.equals("light apps") || meal.equals("heavy apps")  || meal.equals("none") ){
+            accurateMealInput = false;
+          } else {
+            System.out.println("I'm sorry, that is not a listed option. Please enter one of the following meal options: lunch, dinner, light apps, heavy apps, or none");
+          }
+        }
 
-        System.out.println("What type of entertainment would you like?: DJ, steel drum band,line dancing, magician, or none");
-        String userEntertainmentType = console.readLine();
-
-        PartyPlanningService userDetails = new PartyPlanningService(userGuestNumbers, userMealType, userBarType, userEntertainmentType);
-
-        System.out.println("PARTY DETAILS:")
-        System.out.println("----------------------------------");
-        System.out.println("Guest Numbers: " + userDetails.getGuestNumbers());
-        System.out.println("Meal Plan: " + userDetails.getMealType());
-        System.out.println("Bar Plan: " + userDetails.getBarType());
-        System.out.println("Entertainment: " + userDetails.getEntertainmentType());
-
+        // System.out.println("What type of drink options would you like?: full bar, wine & beer, or none");
+        // String bar = console.readLine();
+        //
+        // System.out.println("What type of entertainment would you like?: DJ, steel drum band,line dancing, magician, or none");
+        // String entertainment = console.readLine();
+        //
+        // PartyPlanningService userDetails = new PartyPlanningService(userGuestNumbers, userMealType, userBarType, userEntertainmentType);
+        //
+        // System.out.println("PARTY DETAILS:");
+        // System.out.println("----------------------------------");
+        // System.out.println("Guest Numbers: " + userDetails.getGuestNumbers());
+        // System.out.println("Meal Plan: " + userDetails.getMealType());
+        // System.out.println("Bar Plan: " + userDetails.getBarType());
+        // System.out.println("Entertainment: " + userDetails.getEntertainmentType());
+        // System.out.println("----------------------------------");
+        //
 
 
 

@@ -16,7 +16,7 @@ class PartyPlanningService {
   }
 
   public int totalCost() {
-    mTotalCost = 1;
+    mTotalCost = 0;
     mFacilityRentalCost = 250;
     if (mMealOptions.equals("LUNCH")) {
       mTotalCost += 12;
@@ -39,9 +39,9 @@ class PartyPlanningService {
     if (mEntertainmentOptions.equals("DJ")) {
       mTotalCost += 1200;
     } else if (mEntertainmentOptions.equals("STEEL DRUM BAND")) {
-      mTotalCost += 400;
+      mTotalCost += 150;
     } else if (mEntertainmentOptions.equals("LINE DANCING")) {
-      mTotalCost += 700;
+      mTotalCost += 300;
     } else if (mEntertainmentOptions.equals("MAGICIAN")) {
       mTotalCost += 200;
     }

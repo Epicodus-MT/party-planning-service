@@ -33,7 +33,7 @@ public class App {
         System.out.println("\nWhat is your party size?: ");
         guests = Integer.parseInt(console.readLine());
 
-        System.out.println("\nWhat type of food would you like?: lunch, dinner, light apps, heavy apps, or none");
+        System.out.println("\nWhat type of food would you like (cost/person)?: lunch ($12), dinner($15), light apps ($7), heavy apps ($10), or none");
         boolean accurateMealInput = true;
         while(accurateMealInput) {
           meal = console.readLine().toUpperCase();
@@ -44,7 +44,7 @@ public class App {
           }
         }
 
-        System.out.println("\nWhat type of drink options would you like?: full bar, wine & beer, or none");
+        System.out.println("\nWhat type of drink options would you like (cost/person)?: full bar ($20), wine & beer ($10), or none");
         boolean accurateBarInput = true;
         while(accurateBarInput) {
           bar = console.readLine().toUpperCase();
@@ -55,7 +55,7 @@ public class App {
           }
         }
 
-        System.out.println("\nWhat type of entertainment would you like?: DJ, steel drum band, line dancing, magician, or none");
+        System.out.println("\nWhat type of entertainment would you like?: DJ ($1200), steel drum band ($150), line dancing ($300), magician ($200), or none");
         boolean accurateEntertainmentInput = true;
         while(accurateEntertainmentInput) {
           entertainment = console.readLine().toUpperCase();
@@ -75,7 +75,6 @@ public class App {
       int cost = party.totalCost();
 
       System.out.print("\nYour party total is: $" + cost);
-    //   // System.out.print("Your party total is: $%d", mTotalCost)
       runPartyProgram = false;
     }
     System.out.println("\n\nThank you for coming! We hope to be a part of your next party planning experience.");

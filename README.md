@@ -5,7 +5,7 @@
 #### By _**Mara Timberlake**_
 
 ## Description
-_This is a java command line application for an all-inclusive party planning service. The user will be prompted with several questions about a party they're throwing. Based on information they provide, the program will create a unique Event object and calculate an estimated cost for party planning services._
+_This is a command line application for an all-inclusive party planning service. The user will be prompted with several questions about a party they're throwing. Based on information they provide, the program will create a unique Event object and calculate an estimated cost for party planning services._
 
 ## Specifications
 
@@ -26,10 +26,12 @@ party-planning-service/
 ├── src/
 │    └── main/
 │    │    └── java/
+|    │          └── App.java
 |    │          └── PartyPlanningService.java
 |    └── test/
 │         └── java/
 |               └── PartyPlanningServiceTest.java
+├── .gitignore
 ├── build.gradle
 └── README.md
 ```

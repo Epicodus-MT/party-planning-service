@@ -1,11 +1,12 @@
 import java.util.*;
 
-public class PartyPlanningService {
+class PartyPlanningService {
   private int mGuestNumbers;
   private String mMealOptions;
   private String mBarOptions;
   private String mEntertainmentOptions;
   private int mTotalCost;
+  private int mFacilityRentalCost;
 
   public PartyPlanningService (int guests, String meal, String bar, String entertainment) {
     mGuestNumbers = guests;
@@ -16,6 +17,7 @@ public class PartyPlanningService {
 
   public int totalCost() {
     mTotalCost = 1;
+    mFacilityRentalCost = 250;
     if (mMealOptions.equals("LUNCH")) {
       mTotalCost += 12;
     } else if (mMealOptions.equals("DINNER")) {
@@ -32,6 +34,7 @@ public class PartyPlanningService {
       mTotalCost += 10;
     }
     mTotalCost *= mGuestNumbers;
+    mTotalCost += mFacilityRentalCost;
 
     if (mEntertainmentOptions.equals("DJ")) {
       mTotalCost += 1200;
@@ -42,6 +45,7 @@ public class PartyPlanningService {
     } else if (mEntertainmentOptions.equals("MAGICIAN")) {
       mTotalCost += 200;
     }
+    mTotalCost += mFacilityRentalCost;
     return mTotalCost;
   }
 }

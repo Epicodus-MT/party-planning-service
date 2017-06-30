@@ -8,6 +8,11 @@ public class App {
     boolean runPartyProgram = true;
     // boolean drawLoop = true;
 
+    int guestNumbers = 0;
+    String meal = "";
+    String bar = "";
+    String entertainment = "";
+
     //WELCOME
     System.out.println("Welcome to Timberlake Event Planning");
     System.out.println("an all-inclusive party planning service");
@@ -21,11 +26,15 @@ public class App {
       //USER PROMPT
       System.out.println("Please enter \"PARTY\" to plan your next party with us,");
       System.out.println("or enter \"EXIT\" to quit the program.");
-      String userInput = console.readLine();
+      String userInput = console.readLine().toUpperCase();
 
       if (userInput.equals("PARTY")) {
         //~~~~~~~~UPDATE DETAILS~~~~~~~
         System.out.println("You have chosen to party! Nice!!");
+
+
+
+
 
       } else if(userInput.equals("EXIT")) {
         runPartyProgram = false;
@@ -33,5 +42,6 @@ public class App {
         System.out.println("Did not recognize input - Enter \"PARTY\" to plan your next party with us, or \"EXIT\" to quit the program");
       }
     }
-  System.out.println("Thank you for coming! We hope to be a part of your next party planning experience.");
+    System.out.println("Thank you for coming! We hope to be a part of your next party planning experience.");
+  }
 }

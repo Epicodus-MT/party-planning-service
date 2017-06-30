@@ -1,24 +1,22 @@
 # _Party Planning Service_
 
-#### _Brief Description: This is a java program that allows user to plan a party and displays the costs, June 30, 2017_
+#### _Brief Description: This is a java application that allows user to plan a party and displays the costs, June 30, 2017_
 
 #### By _**Mara Timberlake**_
 
 ## Description
-_A web application that where a user can play a game of solitaire by dragging the cards to the correct position, or double clicking to place automatically._
-
+_This is a java command line application for an all-inclusive party planning service. The user will be prompted with several questions about a party they're throwing. Based on information they provide, the program will create a unique Event object and calculate an estimated cost for party planning services._
 
 ## Specifications
 
-* _It can take in user input_
-* _Calculate costs depending on answers given_
+* _Program asks users a series of questions_
+* _Takes in user input_
+* _Calculates and displays the costs based on answer given_
 * _Example:_
 
 |Behavior|Input|Output|
 |---|---|---|
-|Program asks users a series of questions|Lists the number of people who will attend party|Displays the costs based on answer given|
-|---|---|---|
-|How many people will attend this event?|100| Adds $5/person to event total|
+|How many people will attend this event?|100|Adds $5/person to event total|
 
 ## What's included
 Within the repository you'll find the following directories and files:
@@ -38,9 +36,11 @@ party-planning-service/
 
 ## Setup/Installation Requirements
 
-* _Clone project onto Desktop_
+* _Install gradle on your device_
 * _LOCAL: Go to Terminal_
-* _Run Program_
+* _Clone this repository_
+* _Navigate to App.class file 'cd build/classes/java/main'_
+* _Run program 'java App'_
 
 ## Known Bugs
 

@@ -3,7 +3,7 @@ apply plugin: 'application'
 
 archivesBaseName = "party-planning-service"
 version = '1.0'
-mainClassName = "PartyPlanningService"
+mainClassName = "App"
 
 repositories {
  mavenCentral()

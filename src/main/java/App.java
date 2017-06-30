@@ -19,8 +19,8 @@ public class App {
     System.out.println("----------------------------------");
 
     //NEW EVENT
-    // Party party = new Party();
-    // party.initializeParty();
+    PartyPlanningService party = new Party();
+    party.initializeParty();
 
     while (runPartyProgram) {
       //USER PROMPT
@@ -29,7 +29,6 @@ public class App {
       String userInput = console.readLine().toUpperCase();
 
       if (userInput.equals("PARTY")) {
-        //~~~~~~~~UPDATE DETAILS~~~~~~~
         System.out.println("What is your party size?: ");
         int guests = Integer.parseInt(console.readLine());
 
@@ -39,21 +38,40 @@ public class App {
         boolean accurateMealInput = true;
         while(accurateMealInput) {
           meal = console.readLine().toUpperCase();
-          if(meal.equals("lunch") || meal.equals("dinner") || meal.equals("light apps") || meal.equals("heavy apps")  || meal.equals("none") ){
+          if(meal.equals("LUNCH") || meal.equals("DINNER") || meal.equals("LIGHT APPS") || meal.equals("HEAVY APPS")  || meal.equals("NONE") ){
             accurateMealInput = false;
           } else {
             System.out.println("I'm sorry, that is not a listed option. Please enter one of the following meal options: lunch, dinner, light apps, heavy apps, or none");
           }
         }
 
-        // System.out.println("What type of drink options would you like?: full bar, wine & beer, or none");
-        // String bar = console.readLine();
-        //
-        // System.out.println("What type of entertainment would you like?: DJ, steel drum band,line dancing, magician, or none");
-        // String entertainment = console.readLine();
-        //
-        // PartyPlanningService userDetails = new PartyPlanningService(userGuestNumbers, userMealType, userBarType, userEntertainmentType);
-        //
+        System.out.println("What type of drink options would you like?: full bar, wine & beer, or none");
+        String bar = console.readLine();
+
+        boolean accurateBarInput = true;
+        while(accurateBarInput) {
+          bar = console.readLine().toUpperCase();
+          if(bar.equals("FULL BAR") || bar.equals("WINE & BEER") || bar.equals("NONE") ){
+            accurateBarInput = false;
+          } else {
+            System.out.println("I'm sorry, that is not a listed option. Please enter one of the following bar options: full bar, wine & beer, or none");
+          }
+        }
+        System.out.println("What type of entertainment would you like?: DJ, steel drum band, line dancing, magician, or none");
+        String entertainment = console.readLine();
+
+        boolean accurateEntertainmentInput = true;
+        while(accurateEntertainmentInput) {
+          entertainment = console.readLine().toUpperCase();
+          if(entertainment.equals("DJ") || entertainment.equals("STEEL DRUM BAND") || entertainment.equals("LINE DANCING") || entertainment.equals("MAGICIAN")  || entertainment.equals("NONE") ){
+            accurateEntertainmentInput = false;
+          } else {
+            System.out.println("I'm sorry, that is not a listed option. Please enter one of the following entertainment options: DJ, steel drum band, line dancing, magician, or none");
+          }
+        }
+
+
+
         // System.out.println("PARTY DETAILS:");
         // System.out.println("----------------------------------");
         // System.out.println("Guest Numbers: " + userDetails.getGuestNumbers());
@@ -61,7 +79,7 @@ public class App {
         // System.out.println("Bar Plan: " + userDetails.getBarType());
         // System.out.println("Entertainment: " + userDetails.getEntertainmentType());
         // System.out.println("----------------------------------");
-        //
+
 
 
 

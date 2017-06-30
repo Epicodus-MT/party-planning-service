@@ -4,9 +4,9 @@ import static org.junit.Assert.*;
 public class PartyPlanning {
 
   @Test
-  public void runPartyPlanningService_instatiates() {
-    PartyPlanning testPartyPlanning = new PartyPlanning(100, "lunch", "none", "none");
-    assertEquals(true, testPartyPlanning instanceOf PartyPlanning);
+  public void runPartyPlanningService_instantiation() {
+    Party testParty = new Party(100, "lunch", "none", "magician");
+    assertEquals(true, testParty instanceOf Party);
   }
 
 }

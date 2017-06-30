@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class App {
   public static void main(String[] args) {
-
     Console console = System.console();
     boolean runPartyProgram = true;
+    // boolean drawLoop = true;
 
     //WELCOME
     System.out.println("Welcome to Timberlake Event Planning");
@@ -19,14 +19,14 @@ public class App {
 
     while (runPartyProgram) {
       //USER PROMPT
-      System.out.println("Please enter \"PARTY\" to plan your next party with us.");
-      System.out.println("Please enter \"EXIT\" to quit the program.");
+      System.out.println("Please enter \"PARTY\" to plan your next party with us,");
+      System.out.println("or enter \"EXIT\" to quit the program.");
       String userInput = console.readLine();
 
       if (userInput.equals("PARTY")) {
         //~~~~~~~~UPDATE DETAILS~~~~~~~
         System.out.println("You have chosen to party! Nice!!");
-        
+
       } else if(userInput.equals("EXIT")) {
         runPartyProgram = false;
       } else {

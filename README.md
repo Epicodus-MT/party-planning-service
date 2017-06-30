@@ -1,48 +1,46 @@
-# _Retro Solitaire Webpage_
+# _Party Planning Service_
 
-#### _Brief Description: This is a web application that allows user to play solitaire online, June 22, 2017_
+#### _Brief Description: This is a java program that allows user to plan a party and displays the costs, June 30, 2017_
 
-#### By _**Mara Timberlake, Saul, Lincoln and Yokke**_
+#### By _**Mara Timberlake**_
 
 ## Description
 _A web application that where a user can play a game of solitaire by dragging the cards to the correct position, or double clicking to place automatically._
 
-|Behavior|Input|Output|
-|---|---|---|
-|User drags card to the correct location|King of spades to blank space on page|Position is set until moved again|
 
 ## Specifications
 
 * _It can take in user input_
-* _Calculate costs depending on and number of toppings, and display results to the user_
+* _Calculate costs depending on answers given_
 * _Example:_
 
-|Input|Output|
-|---|---|
-|Small: fresh mozzarella, onions, sun-dried tomatoes|current balance = 13.00|
+|Behavior|Input|Output|
+|---|---|---|
+|Program asks users a series of questions|Lists the number of people who will attend party|Displays the costs based on answer given|
+|---|---|---|
+|How many people will attend this event?|100| Adds $5/person to event total|
 
 ## What's included
 Within the repository you'll find the following directories and files:
 
 ```
-pizza-order/
-├── backupImg
-├── css/
-│    ├── bootstrap.css
-│    └── styles.css
-├── js/
-│    ├── jquery-3.2.1.js
-│    └── script.js
-├── index.html
+party-planning-service/
+├── src/
+│    └── main/
+│    │    └── java/
+|    │          └── PartyPlanningService.java
+|    └── test/
+│         └── java/
+|               └── PartyPlanningServiceTest.java
+├── build.gradle
 └── README.md
 ```
 
 ## Setup/Installation Requirements
 
 * _Clone project onto Desktop_
-* _LOCAL: Open pizza-order folder and open index.html_
-* _Order pizza(s)_
-* _Press Submit button_
+* _LOCAL: Go to Terminal_
+* _Run Program_
 
 ## Known Bugs
 
@@ -50,14 +48,14 @@ _No known bugs at this time_
 
 ## Support and contact details
 
-_For questions or feedback, please notify Mara Timberlake at maratimberlake@msn.com, Saul at ..., Lincoln at ..., Yokke at ..._
+_For questions or feedback, please notify Mara Timberlake at maratimberlake@msn.com_
 
 ## Technologies Used
 
-_Languages used include HTML, CSS, and Javascript. Libraries used include Bootstrap CSS and JQuery. IDE used - Atom_
+_Languages used include Java. IDE used - Atom_
 
 ### License
 
 *This software runs under the MIT license*
 
-Copyright (c) 2017 **_Mara Timberlake, Saul, Lincoln_**
+Copyright (c) 2017 **_Mara Timberlake_**

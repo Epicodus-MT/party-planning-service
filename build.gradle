@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-archivesBaseName = "partyPlanningService"
+archivesBaseName = "party-planning-service"
 version = '1.0'
 mainClassName = "PartyPlanningService"
 

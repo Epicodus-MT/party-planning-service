@@ -1,23 +1,40 @@
 import java.util.*;
 
-class PartyPlanningService {
+
+class Event {
   private int mGuestNumbers;
   private String mMealOptions;
   private String mBarOptions;
   private String mEntertainmentOptions;
   private int mTotalCost;
-  private int mFacilityRentalCost;
+  private int mFacilityRentalCost = 250;
 
-  public PartyPlanningService (int guests, String meal, String bar, String entertainment) {
+  public Event (int guests, String meal, String bar, String entertainment) {
     mGuestNumbers = guests;
     mMealOptions = meal.toUpperCase();
     mBarOptions = bar.toUpperCase();
     mEntertainmentOptions = entertainment.toUpperCase();
   }
 
-  public int totalCost() {
+  public int getGuests() {
+    return mGuestNumbers;
+  }
+
+  public String getMeal() {
+    return mMealOptions;
+  }
+
+  public String getBar() {
+    return mBarOptions;
+  }
+
+  public String getEntertainment() {
+    return mEntertainmentOptions;
+  }
+
+  public int getTotalCost() {
     mTotalCost = 0;
-    mFacilityRentalCost = 250;
+// 100, "lunch", "none", "magician"
     if (mMealOptions.equals("LUNCH")) {
       mTotalCost += 12;
     } else if (mMealOptions.equals("DINNER")) {
@@ -33,8 +50,8 @@ class PartyPlanningService {
     } else if (mBarOptions.equals("WINE & BEER")) {
       mTotalCost += 10;
     }
-    mTotalCost *= mGuestNumbers;
-    mTotalCost += mFacilityRentalCost;
+    mTotalCost *= mGuestNumbers; // 1188
+    // mTotalCost += mFacilityRentalCost;
 
     if (mEntertainmentOptions.equals("DJ")) {
       mTotalCost += 1200;
@@ -45,6 +62,15 @@ class PartyPlanningService {
     } else if (mEntertainmentOptions.equals("MAGICIAN")) {
       mTotalCost += 200;
     }
+
+    if (mGuestNumbers >= 100) {
+      mTotalCost -= 100;
+    }
+
+    if (mEntertainmentOptions.equals("DJ") && mBarOptions.equals("FULL BAR")) {
+      mTotalCost -= 250;
+    }
+
     mTotalCost += mFacilityRentalCost;
     return mTotalCost;
   }

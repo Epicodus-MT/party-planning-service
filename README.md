@@ -16,7 +16,7 @@ _This is a command line application for an all-inclusive party planning service.
 
 |Behavior|Input|Output|
 |---|---|---|
-|How many people will attend this event?|100|Adds $5/person to event total|
+|How many people will attend this event?|100|Multiply by Meal & Bar total (Ex: $12 * 100 = $1200)|
 
 ## What's included
 Within the repository you'll find the following directories and files:

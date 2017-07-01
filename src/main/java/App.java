@@ -17,8 +17,8 @@ public class App {
     System.out.println("----------------------------------");
     System.out.println("Complementary non-alchoholic beverages included in all party packages!");
     System.out.println("The following coupons are available after your party planning information is submited:");
-    System.out.println("* Ten percent off for 100+ guests");
-    System.out.println("* Twenty percent off if you order both the DJ music option and Full Bar beverage option");
+    System.out.println("* $100 discount for 100+ guests");
+    System.out.println("* $250 discount if you order both the DJ music option and Full Bar beverage option");
     System.out.println("----------------------------------");
 
     //USER PROMPT
@@ -71,12 +71,21 @@ public class App {
         System.out.println("Did not recognize input - Enter \"PARTY\" to plan your next party with us, or \"EXIT\" to quit the program");
       }
 
-      PartyPlanningService party = new PartyPlanningService (guests, meal, bar, entertainment);
-      int cost = party.totalCost();
+      Event party = new Event (guests, meal, bar, entertainment);
+      int cost = party.getTotalCost();
+
+      if (party.getGuests() >= 100) {
+          System.out.println("\nSince you have 100+ guests, you have qualified for a $100 discount.");
+      }
+      if (party.getBar().equals("FULL BAR")) {
+        if (party.getEntertainment().equals("DJ")) {
+          System.out.println("\nSince you have combined the Full Bar Service and DJ Entertainment, you have qualified for a $250 discount.");
+        }
+      }
 
       System.out.print("\nYour party total is: $" + cost);
       runPartyProgram = false;
     }
-    System.out.println("\n\nThank you for coming! We hope to be a part of your next party planning experience.");
+    System.out.println("\n\nThank you for coming! We hope to be a part of your next party planning experience.\b");
   }
 }
